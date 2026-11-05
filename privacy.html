@@ -24,17 +24,18 @@ footer { margin-top: 56px; font-size: 15px; color: var(--muted); }
 <body>
 <main>
 <h1>Privacy Policy</h1>
-<p class="lead">VisualCrimes48 Upload. Effective November 4, 2026.</p>
+<p class="lead">VisualCrimes48 Upload. Effective November 5, 2026.</p>
 <div class="rule"></div>
 
 <h2>What this tool is</h2>
 <p>VisualCrimes48 Upload is a private tool that publishes videos to the VisualCrimes48 YouTube channel. Only the channel's operator signs in to it. It does not collect data from viewers or from anyone else.</p>
 
 <h2>Google user data the tool accesses</h2>
-<p>The operator signs in once with the channel's Google account. The tool asks Google for two permissions:</p>
+<p>The operator signs in once with the channel's Google account. The tool asks Google for three permissions:</p>
 <ul>
 <li><strong>Upload videos</strong> (<code>youtube.upload</code>): to upload the channel's own videos, with title, description, publication time and thumbnail.</li>
-<li><strong>View the YouTube account</strong> (<code>youtube.readonly</code>): to read the channel's name, which confirms that the right channel is connected.</li>
+<li><strong>View the YouTube account</strong> (<code>youtube.readonly</code>): to read the channel's name, which confirms that the right channel is connected, and the public numbers and comments of the channel's own videos.</li>
+<li><strong>View YouTube Analytics reports</strong> (<code>yt-analytics.readonly</code>): to read how the channel's own videos perform, such as views, watch time and where viewers stop watching.</li>
 </ul>
 
 <h2>How the data is used and stored</h2>
@@ -42,14 +43,15 @@ footer { margin-top: 56px; font-size: 15px; color: var(--muted); }
 <li>The access credentials stay in a protected file on the operator's own computer. They are not sent anywhere except to Google when the tool renews its access.</li>
 <li>The channel's name is only shown to the operator when connecting, and it is not stored.</li>
 <li>The links of uploaded videos are kept on the operator's computer and sent as status messages to the operator's own Telegram chat. The link of a long video also appears in the description of the matching Short on YouTube.</li>
+<li>Once a week the tool reads the performance numbers and comments of the channel's own videos, keeps them on the operator's computer, and sends a short report to the operator's own Telegram chat. To write the assessment in that report, the numbers, the video titles and the comments are sent to Anthropic's Claude API, which processes them only to return that text.</li>
 </ul>
 
 <h2>Sharing</h2>
-<p>Google user data is not sold, and it is not shared with anyone apart from the status messages described above. It is not used for advertising, and it is not used to develop or train AI models.</p>
+<p>Google user data is not sold, and it is not shared with anyone apart from the status messages and the weekly report described above. It is not used for advertising, and it is not used to develop or train AI models.</p>
 <p>The tool's use of information received from Google APIs follows the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
 
 <h2>Deleting the data and revoking access</h2>
-<p>Access can be withdrawn at any time under <a href="https://myaccount.google.com/permissions">Google account permissions</a>. Deleting the credentials file on the operator's computer removes the stored access.</p>
+<p>Access can be withdrawn at any time under <a href="https://myaccount.google.com/permissions">Google account permissions</a>. Deleting the credentials file on the operator's computer removes the stored access, and deleting the report files removes the stored numbers.</p>
 
 <h2>This website</h2>
 <p>These pages set no cookies and include no analytics. The hosting provider, GitHub, may process technical data such as IP addresses to deliver the pages.</p>
